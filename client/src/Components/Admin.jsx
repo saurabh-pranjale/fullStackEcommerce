@@ -29,24 +29,25 @@ const Admin = () => {
   };
 
   return (
-    <div>
-      <h1>Admin Panel</h1>
-      <div className='w-[95%]  m-auto flex flex-row justify-center'>
-      <div className='flex flex-wrap flex-row'>
+    <div className="container mx-auto px-4 py-8">
+    <h1 className="text-3xl font-semibold mb-8 text-center">Admin Panel</h1>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.map((p) => (
-          <div key={p._id} className='m-5 flex flex-row border rounded p-4'>
-            <Product p={p} />
-            <div className='flex mt-2'>
-              <Link to={`/admin/edit/${p._id}`} className='mr-2'> {/* Use Link component instead of button */}
-                Edit
-              </Link>
-              <button onClick={() => handleDelete(p._id)}>Delete</button>
+            <div key={p._id} className="bg-white m-auto rounded-lg shadow-md overflow-hidden">
+                <Product p={p} />
+                <div className="p-4">
+                    <div className="flex justify-between items-center">
+                        <Link to={`/admin/edit/${p._id}`} className="text-blue-500 hover:underline mr-2">
+                            Edit
+                        </Link>
+                        <button onClick={() => handleDelete(p._id)} className="text-red-500 hover:underline">Delete</button>
+                    </div>
+                </div>
             </div>
-          </div>
         ))}
-      </div>
-      </div>
     </div>
+</div>
+
   );
 };
 

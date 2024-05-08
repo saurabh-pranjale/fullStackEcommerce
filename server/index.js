@@ -29,9 +29,9 @@ app.post('/signup', signup);
 app.post('/signin',signin);
 app.post('/upload',auth,prodo);
 app.delete('/delete/:id',deleteProduct);
-app.put('/update/:id',auth,updateProduct);
+app.put('/update/:id',updateProduct);
 app.get('/products',auth,getProducts);
-app.get('/products/:id',auth,getUniqProduct);
+app.get('/products/:id',getUniqProduct);
 
 
 // Define default route

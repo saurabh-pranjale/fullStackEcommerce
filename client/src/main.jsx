@@ -7,11 +7,12 @@ import { store } from '../Redux/Storage.js'
 import { AuthProvider } from './Components/Context.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+    <div className='bg-gray-200'>
 <AuthProvider>    
 <Provider store={store}>
 <App />
 </Provider>
 </AuthProvider>
-   
+</div>
 
 )

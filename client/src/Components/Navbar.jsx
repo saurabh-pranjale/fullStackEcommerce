@@ -19,14 +19,14 @@ const Navbar = () => {
     }
 
     return (
-        <nav className='bg-red-600 h-[3rem] flex items-center'>
+        <nav className='bg-red-600 h-[3rem] flex items-center sticky top-0 z-50'>
             <div className='container mx-auto px-4'>
                 <div className='flex justify-between items-center'>
                     <Link to={'/'}>
                         <h2 className='text-2xl font-mono font-extrabold text-white'>TE</h2>
                     </Link>
                     <div className='flex items-center'>
-                        { state ? <button onClick={Logout}>Logout</button> :<CgProfile size={32} color='white' />}
+                        { state ? <button onClick={Logout} className="text-white hover:underline focus:outline-none">Logout</button> :<CgProfile size={32} color='white' />}
                         
                         {cart.length > 0 && (
                                     <span className='absolute top-0 right-0 bg-white text-red-600 rounded-full w-4 h-4 flex items-center justify-center text-xs'>
