@@ -18,7 +18,7 @@ const Signin = () => {
         
         try {
             const response = await axios.post('http://localhost:4000/signin', { email, password });
-            console.log(response.data); // Log the response if needed
+            console.log(response.data); 
             localStorage.setItem('jwt',response.data.token)
             setState(true)
                 navigate('/home');

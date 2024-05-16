@@ -25,6 +25,12 @@ const Navbar = () => {
                     <Link to={'/'}>
                         <h2 className='text-2xl font-mono font-extrabold text-white'>TE</h2>
                     </Link>
+                    <div className='bg-red-200 w-[30rem]'>
+                        <ul className='bg-blue-200 w-[50%] flex flex-row justify-around'>
+                           <Link to={'/home'}><li>Home</li></Link> 
+                           <Link to={'/admin'}><li>Admin</li></Link> 
+                        </ul>
+                    </div>
                     <div className='flex items-center'>
                         { state ? <button onClick={Logout} className="text-white hover:underline focus:outline-none">Logout</button> :<CgProfile size={32} color='white' />}
                         

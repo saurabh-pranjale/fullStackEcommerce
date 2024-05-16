@@ -25,7 +25,7 @@ const CartItem = ({ item, index }) => {
                 </div>
                 <div className="m-auto flex flex-col ml-2 w-[70%]">
                     <h1 className="font-bold mb-2 max-w-[9rem]">{item.name}</h1>
-                    <h1 className="max-w-[16rem] md:max-w-[20rem] mb-2">{item.description.slice(0, 40)}</h1>
+                    <h1 className="max-w-[16rem] md:max-w-[20rem] mb-2">{item.description.slice(0, 40)}...</h1>
                     <div className="flex flex-row my-2">
                         <div className="flex flex-row justify-center items-center">
                             <p className="text-[1rem] font-extrabold cursor-pointer border border-black w-6 flex items-center justify-center hover:bg-slate-200" onClick={() => dispatch(decreaseQuantity({ id: item.id }))}>-</p>

@@ -14,6 +14,7 @@ const Home = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [data, setData] = useState([]);
   const [currentData, setCurrentData] = useState([]);
+  
 
 
   const navigate = useNavigate()
@@ -43,6 +44,17 @@ const Home = () => {
 
   return (
     <>
+
+<div className='flex justify-center'>
+        <input
+          type="text"
+          // value={searchQuery}
+          // onChange={handleSearch}
+          placeholder="Search Products"
+          className="p-2 border border-gray-300 rounded-md mr-2"
+        />
+        <button  className="px-4 py-2 bg-blue-500 text-white rounded-md">Search</button>
+      </div>
 
       <div className='flex flex-wrap justify-center w-full '>
         <div className=' w-[90%] flex flex-wrap flex-row content-center  justify-center'>

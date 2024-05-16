@@ -31,6 +31,10 @@ const Admin = () => {
   return (
     <div className="container mx-auto px-4 py-8">
     <h1 className="text-3xl font-semibold mb-8 text-center">Admin Panel</h1>
+    
+    <Link to={'/admin/addProduct'}> <button className="bg-green-600 hover:bg-green-700 h-[40px] w-[40px] text-white text-sm px-4 py-2  border rounded-full">
+          +
+ </button></Link>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.map((p) => (
             <div key={p._id} className="bg-white m-auto rounded-lg shadow-md overflow-hidden">
