@@ -7,16 +7,18 @@ import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const { cart } = useSelector((state) => state)
-  const [subTotal, subTotalAmount] = useState(0);
+  const [quantity, setQuantity] = useState(0);
   const [shippingCharge, setShippingCharge] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
 
 
-
+console.log(cart)
 
   useEffect(() => {
     setTotalAmount(cart.reduce((acc, curr) => acc + curr.price, 0));
   }, [cart])
+
+ 
 
   useEffect(() => {
     if (totalAmount <= 499) {
@@ -25,6 +27,12 @@ const Cart = () => {
       setShippingCharge(0)
     }
   }, [totalAmount]);
+
+
+   cart.map((item)=>{
+    console.log()
+  return setQuantity(item.quantity)
+  })
 
   return (
     <div>
@@ -46,7 +54,7 @@ const Cart = () => {
                   return <CartItems key={item.id} item={item} totalAmount={totalAmount} itemIndex={index} />
                 })
               }
-              <p className=" py-2 ml-2 font-bold">Sub Total: <span className="font-normal">${totalAmount}</span></p>
+              <p className=" py-2 ml-2 font-bold">Sub Total: <span className="font-normal">${ totalAmount}</span></p>
             </div>
 
             <div className=" border-2 border-black md:w-[40%] m-auto w-[95%] h-[20rem]  mt-2">

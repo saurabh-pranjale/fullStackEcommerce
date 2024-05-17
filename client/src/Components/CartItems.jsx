@@ -37,7 +37,7 @@ const CartItem = ({ item, index }) => {
                             <p className="px-4">{item.quantity}</p>
                             <p className="text-[1rem] font-extrabold cursor-pointer border border-black w-6 flex items-center justify-center hover:bg-slate-200" onClick={handleIncrease}>+</p>
                         </div>
-                        <p className="ml-6 sm:ml-[7rem]">${item.price}</p>
+                        <p className="ml-6 sm:ml-[7rem]">${item.quantity * item.price}</p>
                     </div>
                 </div>
             </div>

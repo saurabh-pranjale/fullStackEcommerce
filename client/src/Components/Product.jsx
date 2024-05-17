@@ -9,7 +9,8 @@ const Product = ({p}) => {
     console.log(cart)
 
 const addToCart = () => {
-    dispatch(add(p));
+    console.log("product_add",p)
+    dispatch(add({...p, quantity:1}));
 }
 
 const removeFromCart = () => {
